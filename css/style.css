@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  color: white;
+
+}
+
+.planet {
+  transition: transform 0.3s ease; 
+}
+
+.planet:hover {
+  transform: scale(1.2); 
+}
+
+/* Shared behavior for all planets */
+.planet-container {
+  position: fixed;
+}
+
+/* Specific locations for planets */
+.p1-pos {
+  top: 40%;
+  right: 45%;
+}
+
+.p2-pos {
+  top: 72%;
+  right: 23%;
+}
+
+.p3-pos {
+  top: 60%;
+  right: 72%;
+}
+
+.p4-pos {
+  top: 10%;
+  right: 23%;
+}
+
+.p5-pos {
+  top: 40%;
+  right: 3%;
+}
+
+.p6-pos {
+  top: 5%;
+  right: 75%;
+}
+
+.space {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#shaderCanvas {
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 100;
+}
