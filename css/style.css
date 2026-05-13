@@ -7,6 +7,7 @@ body {
 
 .planet {
   transition: transform 0.3s ease; 
+  cursor: pointer;
 }
 
 .planet:hover {
@@ -16,6 +17,13 @@ body {
 /* Shared behavior for all planets */
 .planet-container {
   position: fixed;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
 }
 
 /* Specific locations for planets */
@@ -31,7 +39,7 @@ body {
 
 .p3-pos {
   top: 60%;
-  right: 72%;
+  right: 79%;
 }
 
 .p4-pos {
@@ -45,9 +53,22 @@ body {
 }
 
 .p6-pos {
+  top: 83%;
+  right: 60%;
+}
+
+.p7-pos {
   top: 5%;
   right: 75%;
 }
+
+.p1-pos { animation-duration: 4s; }
+.p2-pos { animation-duration: 5s; animation-delay: 0.5s; }
+.p3-pos { animation-duration: 6s; animation-delay: 1s; }
+.p4-pos { animation-duration: 4.5s; animation-delay: 1.5s; }
+.p5-pos { animation-duration: 5.5s; animation-delay: 0.8s; }
+.p6-pos { animation-duration: 3.5s; animation-delay: 0.3s; }
+.p7-pos { animation-duration: 7.5s; animation-delay: 1.4s; }
 
 .space {
   position: relative;
