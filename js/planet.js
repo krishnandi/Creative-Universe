@@ -18,7 +18,7 @@ const planets = [
   {
     id: "p4",
     title: "Art",
-    text: "Fine art, digital illustration, visual thinking. I enjoy expressing creativity through various mediums.m"
+    text: "Fine art, digital illustration, visual thinking. I enjoy expressing creativity through various mediums."
   },
   {
     id: "p5",
