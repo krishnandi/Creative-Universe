@@ -3,7 +3,10 @@ const planets = [
   {
     id: "p1",
     title: "About Me",
-    text: "Hi, I'm Krish. A creative soul with a love for technology, art, and storytelling. Welcome to my universe!",
+    text: [
+           "Hi, I'm Krish.",
+           "A creative soul with a love for technology, art, and storytelling. Welcome to my universe!"
+          ],
     details: "I'm a first year Creative Technology student at UCA Farnham. Adobe Student Ambassador, photographer, musician, and builder. Originally from India, currently making things in the UK.",
     images: []
   },
@@ -68,7 +71,20 @@ planets.forEach(function(planet) {
   element.addEventListener("click", function() {
     // Fill in the content
     modalTitle.textContent = planet.title
-    modalText.textContent = planet.text
+    modalText.innerHTML = ""
+
+    // If the text is an array (like planet 1), loop through it and add paragraph tags
+    if (Array.isArray(planet.text)) {
+      planet.text.forEach(function(line) {
+        const p = document.createElement("p")
+        p.textContent = line
+        p.style.marginBottom = "10px" // Adds a nice gap between the lines
+        modalText.appendChild(p)
+      })
+    } else {
+      // If it's a normal string (like planets 2-7), just display it normally
+      modalText.textContent = planet.text
+    }
     modalDetailsText.textContent = planet.details
 
     // Fill in images if any
