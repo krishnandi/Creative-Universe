@@ -158,6 +158,28 @@ body {
   opacity: 1;
 }
 
+.audio-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Keeps it above everything else */
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px); /* Soft glass effect */
+}
+
+.audio-btn:hover {
+  background: rgba(255, 255, 255, 0.2.5);
+  border-color: #ffffff;
+}
+
+
 .hidden {
   display: none;
 }

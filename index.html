@@ -22,12 +22,13 @@
 
 <body>
 
-  <!-- Navigation
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="Photography.html">Photography</a>
-  </nav> -->
+  <audio id="bgAudio" src="sound.mp3" loop>
+  <p>If you are reading this, it is because your browser does not support the audio element.</p>
+  </audio>
+
+  <!-- Mute / Unmute Button -->
+  <button id="audioToggle" class="audio-btn">🔊 Mute</button>
+
 
   <!-- Universe -->
   <main id="space" class="space">
@@ -77,9 +78,13 @@
     <button id="closeModal">✕</button>
     <h2 id="modalTitle">Planet Name</h2>
     <p id="modalText">Description goes here.</p>
-    <a id="modalLink" href="#">Explore ↓</a>
+    <button id="exploreBtn">Explore ↓</button>
+    <div id="modalDetails" class="hidden">
+      <p id="modalDetailsText"></p>
+      <div id="modalImages"></div>
+    </div>
   </div>
-</div>
+  </div>
 
 <script src="js/planet.js"></script>
 
