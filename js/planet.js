@@ -120,10 +120,9 @@ const planets = [
         company: "Adobe",
         role: "Student Ambassador",
         points: [
-          "Promoted Adobe products within student clubs and major campus events",
-          "Organised hands-on sessions and creative workshops teaching peers Adobe Express",
-          "Produced social media content showcasing Adobe tools for academic and personal projects",
-          "Acted as a liaison providing user feedback on product features to Adobe"
+          "Promoting Adobe products within student clubs and major campus events",
+          "Producing social media content showcasing Adobe tools for academic and personal projects",
+          "Acting as a liaison providing user feedback on product features to Adobe"
         ]
       },
       {
