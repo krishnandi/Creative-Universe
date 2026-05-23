@@ -8,8 +8,6 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-
-      cursor: url("shuttle.cur") 16 16, auto;
     }
   </style>
   <meta charset="UTF-8" />
@@ -27,7 +25,65 @@
   </audio>
 
   <!-- Mute / Unmute Button -->
-  <button id="audioToggle" class="audio-btn">🔊 Mute</button>
+  <div class="controls-stack">
+    <button id="audioToggle" class="ctrl-btn">🔊 Mute</button>
+    <button id="infoBtn"    class="ctrl-btn" title="How to navigate">ℹ️ Info</button>
+    <button id="contactBtn" class="ctrl-btn" title="Get in touch">✉️ Contact</button>
+  </div>
+
+  <!-- Info popup (shown on hold / click of info btn) -->
+  <div id="infoPopup" class="info-popup hidden">
+    <h3>How to Navigate</h3>
+    <ul>
+      <li>🪐 <strong>Hover</strong> over a planet to reveal its name</li>
+      <li>🖱️ <strong>Click</strong> any planet to explore that section</li>
+      <li>◀ ▶ Use the <strong>arrows</strong> (or swipe) to browse photo galleries</li>
+      <li>🔊 Toggle <strong>ambient sound</strong> with the Mute button</li>
+      <li>✕ Press <strong>✕</strong> in any panel to close it</li>
+    </ul>
+  </div>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal hidden">
+    <div class="modal-content contact-modal-content">
+      <button id="closeContact">✕</button>
+      <h2>Contact</h2>
+      <p class="contact-subtitle">Let's connect! </p>
+      <div class="contact-links">
+        <a href="mailto:nandi.krish18@email.com" class="contact-link">
+          <span class="contact-icon">📧</span>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">nandi.krish18@email.com</span>
+        </a>
+        <a href="https://instagram.com/krishnandiofficial" target="_blank" class="contact-link">
+          <span class="contact-icon">📸</span>
+          <span class="contact-label">Instagram</span>
+          <span class="contact-value">@krishnandiofficial</span>
+        </a>
+        <a href="https://instagram.com/krishnandi18" target="_blank" class="contact-link">
+          <span class="contact-icon">📸</span>
+          <span class="contact-label">Instagram</span>
+          <span class="contact-value">@krishnandi18</span>
+        </a>
+        <a href="https://linkedin.com/in/krishnandi" target="_blank" class="contact-link">
+          <span class="contact-icon">💼</span>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">Krish Nandi</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="startMenu">
+  <div id="startContent">
+    <h1>Welcome, Traveller.</h1>
+    <p>I am Krish Nandi.</p>
+    <p>You've just entered my universe, a living map of everything I've built, created, and explored.</p>
+    <p>Each planet represents a different part of who I am. Hover over the planets to see their labels. Click on any planet to discover what lives there. For the full experience, let the ambient sound play, or silence it anytime with the volume button in the top right.</p>
+    <em>Begin your exploration.</em>
+    <button id="enterBtn">Enter</button>
+  </div>
+  </div>
 
 
   <!-- Universe -->
@@ -35,58 +91,66 @@
 
   <!-- Planet 1 -->
   <div class="planet-container p1-pos">
-    <img src="assets/p1.png" id="p1"class="planet" width="180">
+    <img src="assets/p1.png" id="p1" class="planet" width="180">
+    <span class="planet-label">About Me</span>
   </div>
 
   <!-- Planet 2 -->
   <div class="planet-container p2-pos">
     <img src="assets/p2.png" id="p2"class="planet" width="120">
+    <span class="planet-label">Photography</span>
   </div>
 
   <!-- Planet 3 -->
   <div class="planet-container p3-pos">
     <img src="assets/p3.png" id="p3"class="planet" width="120">
+    <span class="planet-label">Coding</span>
   </div>
 
   <!-- Planet 4 -->
   <div class="planet-container p4-pos">
     <img src="assets/p4.png" id="p4" class="planet" width="140">
+    <span class="planet-label">Art</span>
   </div>
 
   <!-- Planet 5 -->
   <div class="planet-container p5-pos">
     <img src="assets/p5.png" id="p5" class="planet" width="180">
+    <span class="planet-label">Work Experience</span>
   </div>
 
   <!-- Planet 6 -->
   <div class="planet-container p6-pos">
     <img src="assets/p6.png" id="p6" class="planet" width="170">
+    <span class="planet-label">Certifications</span> 
   </div>
 
   <!-- Planet 7 -->
   <div class="planet-container p7-pos">
     <img src="assets/p7.png" id="p7" class="planet" width="130">
+    <span class="planet-label">Side Quests</span>
   </div>
 
   </main>
 
-  Shader / spaceship cursor
-  <canvas id="shaderCanvas"></canvas> 
-
-  <div id="modal" class="modal hidden">
+<div id="modal" class="modal hidden">
   <div class="modal-content">
     <button id="closeModal">✕</button>
     <h2 id="modalTitle">Planet Name</h2>
+    <img id="modalPhoto" class="modal-about-photo hidden" src="" alt="About Me">
     <p id="modalText">Description goes here.</p>
-    <button id="exploreBtn">Explore ↓</button>
-    <div id="modalDetails" class="hidden">
+    <div id="modalDetails">
       <p id="modalDetailsText"></p>
+      <div id="modalGithub"></div>
       <div id="modalImages"></div>
     </div>
   </div>
-  </div>
+</div>
 
+<canvas id="shaderCanvas"></canvas> 
+<script src="js/shader.js"></script>
 <script src="js/planet.js"></script>
+
 
 </body>
 </html>
