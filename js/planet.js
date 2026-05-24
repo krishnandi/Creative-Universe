@@ -403,7 +403,7 @@ planets.forEach(function (planet) {
     // About Me photo
     const modalPhoto = document.getElementById("modalPhoto")
     if (planet.id === "p1") {
-      modalPhoto.src = "me.jpg"
+      modalPhoto.src = "me.JPG"
       modalPhoto.classList.remove("hidden")
     } else {
       modalPhoto.classList.add("hidden")
