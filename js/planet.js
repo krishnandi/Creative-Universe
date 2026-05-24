@@ -24,18 +24,18 @@ const planets = [
       "portfolio/img (7).jpg",
       "portfolio/img (4).jpg",
       "portfolio/img (12).jpg",
-      "portfolio/img (17).jpg",
-      "portfolio/img (18).jpg",
-      "portfolio/img (21).jpg",
-      "portfolio/img (29).jpg",
-      "portfolio/img (26).jpg",
-      "portfolio/img (14).jpg",
-      "portfolio/img (15).jpg",
-      "portfolio/img (8).jpg",
-      "portfolio/img (13).jpg",
-      "portfolio/img (25).jpg",
-      "portfolio/img (27).jpg",
-      "portfolio/img (32).jpg"
+      "portfolio/img (17).JPG",
+      "portfolio/img (18).JPG",
+      "portfolio/img (21).JPG",
+      "portfolio/img (29).JPG",
+      "portfolio/img (26).JPG",
+      "portfolio/img (14).JPG",
+      "portfolio/img (15).JPG",
+      "portfolio/img (8).JPG",
+      "portfolio/img (13).JPG",
+      "portfolio/img (25).JPG",
+      "portfolio/img (27).JPG",
+      "portfolio/img (32).JPG"
     ]
   },
   {
@@ -399,7 +399,7 @@ planets.forEach(function (planet) {
 
     // Title
     modalTitle.textContent = planet.title
-    
+
     // About Me photo
     const modalPhoto = document.getElementById("modalPhoto")
     if (planet.id === "p1") {
