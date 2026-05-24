@@ -243,7 +243,7 @@ body {
   100% { transform: translateY(0px); }
 }
 
-/* Specific locations for planets */
+/* PLANET POSITIONS */
 .p1-pos {
   top: 40%;
   right: 45%;
@@ -396,6 +396,7 @@ body {
   opacity: 1;
 }
 
+/* ===== AUDIO ===== */
 .audio-btn {
   position: fixed;
   top: 20px;
@@ -576,7 +577,7 @@ body {
   opacity: 0.7;
 }
 
-/* ===== CERTIFICATIONS SCROLL ===== */
+/* ===== CERTIFICATIONS ===== */
 .cert-scroll {
   display: flex;
   flex-direction: column;
@@ -617,6 +618,7 @@ body {
   opacity: 0.8;
 }
 
+/* ===== ART ===== */
 .art-desc-title {
   font-size: 16px;
   font-weight: 600;
@@ -639,6 +641,7 @@ body {
   opacity: 0.7;
 }
 
+/* ===== SIDE QUESTS ===== */
 .quests-list {
   display: flex;
   flex-direction: column;
