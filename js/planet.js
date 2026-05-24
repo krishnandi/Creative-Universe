@@ -399,7 +399,7 @@ planets.forEach(function (planet) {
 
     // Title
     modalTitle.textContent = planet.title
-
+    
     // About Me photo
     const modalPhoto = document.getElementById("modalPhoto")
     if (planet.id === "p1") {
